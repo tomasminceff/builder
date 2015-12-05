@@ -156,7 +156,8 @@ exports.compile = function(load, opts, loader) {
       if (options.target === undefined)
         options.target = transpiler.ScriptTarget.ES5;
       options.module = transpiler.ModuleKind.System;
-      
+      options.inlineSourceMap = false;
+
       var transpileOptions = { 
         compilerOptions: options, 
         renamedDependencies: load.depMap, 
